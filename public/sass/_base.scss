@@ -1,0 +1,85 @@
+/*  imports & applies Eric Meyer's Reset.css
+--------------------------------------------     */
+@import "compass/reset/";
+
+
+
+/* grabs google fonts
+--------------------------------------------     */
+
+//urls
+$url_0: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:assets/logo-twigkit.png);
+$url_1: url(../../../assets/hero-tablet-bg.jpg);
+$url_2: url(/assets/images/email_Native.png);
+$url_3: url(/assets/images/icon_dropbox.png);
+$url_4: url(/assets/images/icon_kuaipan.png);
+$url_5: url(/assets/images/icon_googledrive.png);
+$url_6: url(/assets/images/icon_onedrive.png);
+$url_7: url(/assets/images/icon_hdd.png);
+$url_8: url(/assets/images/icon_android.png);
+$url_9: url(/assets/images/icon_hays.png);
+$url_10: url(/assets/images/icon_linkedin.png);
+$url_11: url(/assets/images/icon_seek.png);
+$url_12: url(/assets/images/icon_indeed.png);
+$url_13: url(/assets/images/tick.png);
+$url_14: url(/assets/images/dropbox.jpg);
+$url_15: url(/assets/images/google_drive.jpg);
+$url_16: url(/assets/images/local_drive.jpg);
+$url_17: url(/assets/images/ts_icon_sprite.png);
+$url_18: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.eot);
+$url_19: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.eot#iefix);
+$url_20: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.woff);
+$url_21: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.ttf);
+$url_22: url(/twigkit/resources/1488438158321/twigkit.css?wroAPI=wroResources&id=classpath:fonts/twigkit.svg#twigkit);
+$url_23: url(../../../assets/fonts/hays.eot);
+$url_24: url(../../../assets/fonts/hays.eot#iefix);
+$url_25: url(../../../assets/fonts/hays.woff);
+$url_26: url(../../../assets/fonts/hays.ttf);
+$url_27: url(../../../assets/fonts/hays.svg#hays);
+$url_28: url(../../../assets/logo-hays-long.png);
+$url_29: url(../../../assets/images/hays_desktop.gif);
+$url_30: url(../../../assets/logo-hays-short.png);
+$url_31: url(../../../assets/Hays-Response-Logo.png);
+$url_32: url(../../../assets/Hays-Response-Desktop-Logo.png);
+
+
+/* sets primary & secondary fonts
+----------------------------------------------   */
+$font-primary: sans-serif, Helvetica, Arial;
+$font-secondary: Helvetica, Geneva, sans-serif;
+
+/* to extend primary font
+-------------------------  */
+%basefontPrimary {
+	font-family: $font-primary;
+	font-weight: normal;
+	margin:0;
+	padding:0;
+	@include clearfix;
+
+}
+
+%basefontSecondary {
+	font-family: $font-secondary;
+	font-weight: normal;
+	@include clearfix;
+
+}
+
+%googleicons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 99%;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+	font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    vertical-align: middle;
+}
