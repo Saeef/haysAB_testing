@@ -24,4 +24,19 @@
     - run npm, bower, and bundle in terminal to install dependencies
     - type grunt to start up local server and load page into your browser
     
+    
+    <hr />
+  
+  <br />
+  
+  <kbd>pop-up screenshot</kbd>
+  ![pop-up screenshot](popup.png?raw=true "mobile" target="_blank")
+    
+    
+    
+    
+    
+    
+    
+    
 :100:
