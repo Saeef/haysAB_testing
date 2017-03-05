@@ -19,7 +19,7 @@
    
 - push code to github
 
-#### to run a copy of test in a local environment:
+#### to run a copy of test in your local environment:
     - clone repository
     - run npm, bower, and bundle in terminal to install dependencies
     - type grunt to start up local server and load page into your browser
