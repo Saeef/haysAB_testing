@@ -25,8 +25,7 @@
     - type grunt to start up local server and load page into your browser
     
     
-    <hr />
-  
+  <hr />
   <br />
   
   <kbd>pop-up screenshot</kbd>
