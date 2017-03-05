@@ -10,7 +10,7 @@
       <meta property="og:type" content="article"/>
       <meta property="og:url" content="https://m.hays.co.uk/Job/Detail/head-of-the-learning-support-service-forest-gate-east-london-en-GB_2934450?applyId=JOB_1641114"/>
       <link rel="shortcut icon" href="public/builds/assets/images/favicon.ico" type="image/x-icon"/>
-      <link rel="stylesheet" type="text/css" href="public/builds/css/styles.css?rel=1488722797808">
+      <link rel="stylesheet" type="text/css" href="public/builds/css/styles.css?rel=1488726045189">
       <script src="public/js/twigkit.js" type="text/javascript"></script>
       <script src="public/js/placeholder-support.js"></script>
       <!--[if lt IE 9]>
@@ -745,7 +745,11 @@ document.getElementsByTagName('head')[0].appendChild(style);
    var popup = $("<div id='popup' class='popup' />");
    var content = $("<div id='content' class='content' />");
    var close = $("<button class='close'>close</button>");
-
+   var consultantName = null;
+   var consultantPhone = null;
+   
+   
+   
 
    /********
    blueButton function
@@ -870,7 +874,17 @@ document.getElementsByTagName('head')[0].appendChild(style);
    debugger;
 
    function loomUp() {
+      //consultants name
+      consultantName = document.getElementById('jd_consultant').innerText;
+      console.log(consultantName);
+      //consultants office
+      consultantOffice = document.getElementById('jd_office');
+      //consultants phone - just phone part of string
+      consultantPhone = document.
+      getElementsByClassName('hays-job-actions-consultant-detail')[0];
+      consultantPhone = consultantPhone.innerText.substring(11,22);
 
+      console.log(consultantPhone);
       //creates overlay div
       overlay();
 
@@ -883,9 +897,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
          content = $("<div id='content' class='content' />");
          //adding content
          content[0].innerHTML = "<h1 class='heading1'>Talk to a Consultant</h1>";
-         content[0].innerHTML += "<p class='pop1'>Speak to the consultant Anthony Davis about this job and to learn more beofre you apply. They can also speak to you about other jobs which may be suitable for you.</p>";
+         content[0].innerHTML += "<p class='pop1'>Speak to the consultant " + "<span style='color:#002776;font-weight:bold;'>" + consultantName  + "</span>" + " about this job and to learn more before you apply. They can also speak to you about other jobs which may be suitable for you.</p>";
          
-         content[0].innerHTML += "<div id='gtouch'><img src='#' alt='call'><span id='slogan'>Get in touch</span><br/><a href='tel:+#' id='phone'>01189070329 </a></div>"
+         content[0].innerHTML += "<div id='gtouch'><img src='#' alt='call'><span id='slogan'>Get in touch</span><br/><a href='tel:+#' id='phone'> " + consultantPhone  + " </a></div>";
          
 
          close = $("<button class='close'>close</button>");
