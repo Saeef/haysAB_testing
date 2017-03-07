@@ -10,7 +10,7 @@
       <meta property="og:type" content="article"/>
       <meta property="og:url" content="https://m.hays.co.uk/Job/Detail/head-of-the-learning-support-service-forest-gate-east-london-en-GB_2934450?applyId=JOB_1641114"/>
       <link rel="shortcut icon" href="public/builds/assets/images/favicon.ico" type="image/x-icon"/>
-      <link rel="stylesheet" type="text/css" href="public/builds/css/styles.css?rel=1488788955611">
+      <link rel="stylesheet" type="text/css" href="public/builds/css/styles.css?rel=1488896628677">
       <script src="public/js/twigkit.js" type="text/javascript"></script>
       <script src="public/js/placeholder-support.js"></script>
       <!--[if lt IE 9]>
@@ -712,17 +712,12 @@ console.clear();
 =========================
  ======================
 */
-
 console.info('\n___________abTest code starts here________________\n\n');
-
 $(document).ready(function () {
-
 /******--------******---------****>
  Styles *|* keeps all code together
  *|* do not interfere with runtime 
 **----*********-----***************/
-
-
 var style = document.createElement('style');
 style.type = 'text/css';
 style.innerHTML = "#popup {width:500px; height:200px; border:5px solid #383838; z-index:2000; background-color:rgba(255,255,255,.95); border:1px inset #0e0e0e;outline:3px solid #c7c7c7; padding:15px;}";
@@ -736,11 +731,8 @@ style.innerHTML += "#gtouch { margin-top:30px; height:55px; vertical-align: bott
 style.innerHTML += "#gtouch img {width:40px; height:40px; margin-right:15px;float:left; background:#0c79d4; color:#fff;}";
 style.innerHTML += "#slogan {float:left; color:#646161;}";
 style.innerHTML += "#phone {float:left; color:#002776; letter-spacing:1px; font-weight:600; line-height:20px; font-size:19px; text-decoration:none;}";
-
 //append to head
 document.getElementsByTagName('head')[0].appendChild(style);
-
-
    //globals
    var popup = $("<div id='popup' class='popup' />");
    var content = $("<div id='content' class='content' />");
@@ -750,13 +742,10 @@ document.getElementsByTagName('head')[0].appendChild(style);
    var perScrolled = null;
    
    
-
    /********
    blueButton function
    *********/
-
    //debugger;
-
    var blueButton = function () { //runs as init *|*
       //clone orange button - no[0]
       var clone = $('#JD_main_apply_button').clone().
@@ -776,36 +765,27 @@ document.getElementsByTagName('head')[0].appendChild(style);
       bluBtn.style.marginLeft = "10px";
       //display prop
       bluBtn.style.display = "inline-block";
-
-
    }; //blueButton function
-
-
    /******************
     openCentered function
    *******************/
-
    //debugger;
-
    function opCloCen() { //open,close and center
       //popup calcs
       var window = $(this); // hold on to value to apply method
       //center calculation: distance from top/left to center of popup
       var top = Math.max(window.height() - 200, 0) / 2 + 'px';
       var left = Math.max(window.width() - 500, 0) / 2 + 'px';
-
       //clear content/close divs and open
       //content.empty();
       //close.empty();
       if (popup != null) {
          $('body').append(popup[0]);
          //add styles to popup
-         popup[0].style.position = "absolute";
+         popup[0].style.position = "fixed";
          popup[0].style.top = top;
          popup[0].style.left = left;
-
       } // not null
-
       if(perScrolled != null && perScrolled != 0) {
          var topNopx = top.substring(0, top.length - 2);
          console.log(top); //426px
@@ -813,7 +793,6 @@ document.getElementsByTagName('head')[0].appendChild(style);
          console.log(topNopx);   //426
          console.log('amount scrolled');
          console.log(perScrolled);
-
          var amtChanged = (perScrolled / 100) * topNopx;
          console.log(amtChanged);
          popup[0].style.top = topNopx + amtChanged +'px';
@@ -822,45 +801,34 @@ document.getElementsByTagName('head')[0].appendChild(style);
             amountScrolled();  
          
          },false); //scroll
-
-
-
       }
-
-
-
      
-
-
    } //opCloCen function  
 
 
    /***************
     function overlay
    ****************/
-
    function overlay() { //call by loomUp
-      debugger;
+      //debugger;
       //if it exists remove
       if ($('#overlay')) {
-
          $('#overlay').remove();
-
          var ovl = document.createElement('div');
          ovl.id = "overlay";
-         ovl.style.position = 'absolute';
+         ovl.style.position = 'fixed';
+         ovl.style.overflow = 'hidden';
          ovl.style.backgroundColor = "rgba(0,0,0,.7)";
          ovl.style.width = window.innerWidth + 'px'; //1803
          ovl.style.height = window.innerHeight + 'px'; //1034
-         ovl.style.top = window.screenTop + "px"; //0 
+         debugger;
+         //ovl.style.top = window.screenTop + "px"; //0 
+         ovl.style.top = '0px'; //0 
          ovl.style.left = window.pageXOffset + "px"; //0
          ovl.style.zIndex = 1000;
-
          //add div to the body
          document.getElementsByTagName('body')[0].appendChild(ovl);
-
       } //if overlay
-
 
       //overlay handler
       var overlay = document.getElementById('overlay');
@@ -870,7 +838,6 @@ document.getElementsByTagName('head')[0].appendChild(style);
          console.log(e);
          //exclude popup obviously and any children of popups
          if (e.target != 'div#popup.popup' && e.target.parentNode != 'div#popup.popup') {
-
             console.log(e);
             e.preventDefault();
             //remove popup
@@ -881,22 +848,13 @@ document.getElementsByTagName('head')[0].appendChild(style);
             document.getElementById('overlay').
             parentElement.
             removeChild(document.getElementById('overlay'));
-
-
          } //if
-
-
       }, false); //anywhere in page outside of popup
-
-
    } //overlay function
-
-
    /***********
    function loomUp   
    ************/
-   debugger;
-
+   //debugger;
    function loomUp() {
       //consultants name
       consultantName = document.getElementById('jd_consultant').innerText;
@@ -907,15 +865,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
       consultantPhone = document.
       getElementsByClassName('hays-job-actions-consultant-detail')[0];
       consultantPhone = consultantPhone.innerText.substring(11,22);
-
       console.log(consultantPhone);
       //creates overlay div
       overlay();
-
       //if it exists remove
       if ($('#popup')) {
          $('#popup').remove();
-
          //creates handle
          popup = $("<div id='popup' class='popup' />");
          content = $("<div id='content' class='content' />");
@@ -925,17 +880,12 @@ document.getElementsByTagName('head')[0].appendChild(style);
          
          content[0].innerHTML += "<div id='gtouch'><img src='#' alt='call'><span id='slogan'>Get in touch</span><br/><a href='tel:+#' id='phone'> " + consultantPhone  + " </a></div>";
          
-
          close = $("<button class='close'>close</button>");
          //append to popup
          popup.append(content, close);
-
          //opens,close and centers popup
          opCloCen();
-
       } //if 
-
-
       //remove popup //target:close
       if (close) {
          document.querySelector('button.close').addEventListener('click', function (e) {
@@ -950,62 +900,44 @@ document.getElementsByTagName('head')[0].appendChild(style);
             document.getElementById('overlay').
             parentElement.
             removeChild(document.getElementById('overlay'));
-
-
          }, false); // close click event
-
       } //if close
-
-
    } //loomUp function
-
-
    //call button
    blueButton();
-
    //on resize
    window.addEventListener('resize',function(e) {
-
       //on resize center popup
       var top = Math.max(e.target.innerHeight - 200, 0) / 2 + 'px';
       var left = Math.max(e.target.innerWidth - 500, 0) / 2 + 'px';
-
       console.log(e);
        if (popup) {
          //add styles to popup
          popup[0].style.position = "absolute";
          popup[0].style.top = top;
          popup[0].style.left = left;
-
-
       } // not null
-
-
-
    }); //resize
-
    //to find out amount scrolled vertically
    function amountScrolled() {
       var winHeight = $(window).height();
       var docHeight = $(document).height();
       var scrollTop = $(window).scrollTop();
       var trackLength = docHeight - winHeight;
+      ovl.style.top = "fixed";
+      ovl.style.overflow = "hidden";
       //amt user scrolled with trackLength to get percentage
       perScrolled = Math.floor(scrollTop/trackLength * 100);  //gets per scrolled
       //perScrolled = Math.floor(scrollTop/trackLength);  //gets per scrolled
-      //console.log(perScrolled + '% scrolled');
-      console.log(perScrolled);
+      console.log(perScrolled + '% scrolled');
+      //console.log(perScrolled);
       return perScrolled;
       
-
    }
-
    
-
    //on click call function
    document.getElementById('button2').
    addEventListener('click', loomUp);
-
 }); //page load
 
  
